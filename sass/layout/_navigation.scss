@@ -1,0 +1,39 @@
+.navigation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.navigation__link {
+  line-height: 51px;
+  height: 51px;
+  color: #909096;
+  margin-bottom: 15px;
+  display: block;
+  position: relative;
+  text-align: center;
+  &::after{
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 1;
+  }
+}
+.link-home:after {
+  content: "HOME";  
+}
+.link-female:after {
+  content: "ABOUT";
+}
+.link-spinner-cog:after {
+  content: "SKILLS";
+}
+.link-eye:after {
+  content: "WORK";
+}
+.link-email:after {
+  content: "CONTACT";
+}

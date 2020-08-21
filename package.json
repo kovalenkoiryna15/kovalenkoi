@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/kovalenkoiryna15/kovalenkoi/issues"
   },
-  "homepage": "https://github.com/kovalenkoiryna15/kovalenkoi#readme"
+  "homepage": "https://github.com/kovalenkoiryna15/kovalenkoi#readme",
+  "dependencies": {}
 }
