@@ -1,0 +1,25 @@
+.theme-options {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.theme-dot {
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+  border: 2px solid $secondary-text;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#light-mode {
+  background-color: $light-mode;
+}
+#dark-mode {
+  background-color: $dark-mode;
+}
+#green-mode {
+  background-color: $green-mode;
+}
+#purple-mode {
+  background-color: $purple-mode;
+}

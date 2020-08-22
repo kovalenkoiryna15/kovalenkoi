@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include font (normal, normal, 1.4rem, 1.6rem);
+  color: $secondary-text; 
+}
+h1 {  
+  @include font (normal, 500, 6rem, 5.3rem);
+  color: $main-text;
+  letter-spacing: 3px;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  @include font (normal, 400, 1.4rem, 1.8rem);
+  letter-spacing: 3px;  
+  margin: 20px 0 10px 0;
+  color: $secondary-text;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+  @include font (normal, 400, 1.1rem, 1.5rem);
+  letter-spacing: 3px;  
+  margin: 10px 0;
+  color: $secondary-text;
+}
+.tags, .main-heading::before, .main-heading::after {
+  font-family: 'La Belle Aurore', cursive;
+  @include font (normal, 300, 1.8rem, 2.52rem);
+  color: $secondary-text;
+}
+.main-heading::before {
+  content: '<h1>';  
+}
+.main-heading::after {
+  content: '</h1>';  
+}
+a.navigation {
+  letter-spacing: 2px;
+}
+a.button {
+  font-family: 'Open Sans', sans-serif;
+  @include font (normal, normal, 1.3rem, 1.82rem);
+  letter-spacing: 4px;
+}
+.personalize {
+  text-align: center;
+}

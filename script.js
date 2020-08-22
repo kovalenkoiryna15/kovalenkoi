@@ -1,8 +1,12 @@
 const blanks = document.querySelectorAll('.blank');
-const intervalTime = 5000;
+const themeDots = document.querySelectorAll('.theme-dot');
 
 window.onload = function() {
+
   handleScrollEvents();
+
+  addThemesDotsHandler();
+
 }
 
 const nextBlank = () => {
@@ -44,9 +48,10 @@ const handleScrollEvents = () => {
       return false;
     }
     mouseWheel = false;
+    // Stop mouse wheel event for 1 second
     setTimeout(function() {
       mouseWheel = true;
-    }, 1000); // Stop mouse wheel event for 1 second
+    }, 500); 
     e = window.event || e;
     const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
     const h = document.documentElement.clientHeight;
@@ -81,3 +86,28 @@ const handleScrollEvents = () => {
   }
 }
 
+// Themes Options
+const addThemesDotsHandler = () => {
+  themeDots.forEach(item => {
+    item.addEventListener('click', function(e){
+      let clickedDot = e.target;
+      let themeMode = clickedDot.getAttribute('mode');
+      setTheme(themeMode);
+    })
+  });
+}
+
+function setTheme (themeMode) {
+  if (themeMode == 'dark') {
+    console.log(document.getElementById('theme-style'))
+    document.getElementById('theme-style').href = 'style.css';    
+  } else if (themeMode == 'green') {
+    document.getElementById('theme-style').href = 'themes/green.css';
+  } else if (themeMode == 'light') {
+    document.getElementById('theme-style').href = 'themes/light.css';
+  } else if (themeMode == 'purple') {
+    document.getElementById('theme-style').href = 'themes/purple.css';
+  } else {
+    document.getElementById('theme-style').href = 'style.css';
+  }
+}
