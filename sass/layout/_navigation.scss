@@ -1,4 +1,7 @@
-.navigation {
+.nav-bar {
+  width: 60px;
+}
+.navigation, .social-networks {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -6,7 +9,7 @@
 .navigation__link {
   line-height: 51px;
   height: 51px;
-  color: #909096;
+  color: $color-navigation;
   margin-bottom: 15px;
   display: block;
   position: relative;
@@ -36,4 +39,10 @@
 }
 .link-email:after {
   content: "CONTACT";
+}
+.social-networks__list__item {
+  padding: 0 0 15px;
+  & a {
+    color: $color-navigation;
+  }
 }

@@ -2680,48 +2680,43 @@ a {
   cursor: pointer;
 }
 
+ul, li {
+  list-style: none;
+}
+
 .nav-ico {
   text-align: center;
   font-size: 20px;
   line-height: 20px;
 }
 
-.ico-home:after, .ico-female:after, .ico-spinner-cog:after, .ico-eye:after, .ico-email:after {
-  font-size: 9px;
-  letter-spacing: 2px;
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-  opacity: 1;
-}
-
-.ico-home:after {
-  content: "HOME";
-}
-
-.ico-female:after {
-  content: "ABOUT";
-}
-
-.ico-spinner-cog:after {
-  content: "SKILLS";
-}
-
-.ico-eye:after {
-  content: "WORK";
-}
-
-.ico-email:after {
-  content: "CONTACT";
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px;
 }
 
 .wrapper {
-  padding: 15px 60px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 60;
+  opacity: 0;
 }
 
-.navigation {
+.blank_current {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.nav-bar {
+  width: 60px;
+}
+
+.navigation, .social-networks {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -2765,6 +2760,13 @@ a {
 
 .link-email:after {
   content: "CONTACT";
+}
+
+.social-networks__list__item {
+  padding: 0 0 15px;
+}
+.social-networks__list__item a {
+  color: #909096;
 }
 
 .nav-bar {

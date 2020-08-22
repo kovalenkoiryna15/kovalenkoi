@@ -3,28 +3,4 @@
   font-size: 20px;
   line-height: 20px;
 }
-.ico-home:after, .ico-female:after, .ico-spinner-cog:after, .ico-eye:after, .ico-email:after {  
-  font-size: 9px;
-  letter-spacing: 2px;
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  text-align: center;
-  opacity: 1;
-}
-.ico-home:after {
-  content: "HOME";  
-}
-.ico-female:after {
-  content: "ABOUT";
-}
-.ico-spinner-cog:after {
-  content: "SKILLS";
-}
-.ico-eye:after {
-  content: "WORK";
-}
-.ico-email:after {
-  content: "CONTACT";
-}
+

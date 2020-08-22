@@ -1,3 +1,19 @@
+.main-container {
+  width: $content-width;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 0 60px;
+}
 .wrapper {
-  padding: 15px 60px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 60;
+  opacity: 0;  
+}
+.blank_current {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
 }
