@@ -3,9 +3,15 @@
   width: max-content;
   cursor: pointer;
   color: $color-active;
+  &:hover {
+    color: $dark-mode;
+  }
 }
 .button_flat {  
   padding: 10px 18px;
   border: 1px solid $color-active;
   margin-top: 25px;
+  &:hover {
+    background-color: $color-active;
+  }
 }

@@ -1,19 +1,38 @@
 body {
-  background-color: #fff;
+  background-color: #eaeaea;
+}
+.nav-bar {
+  background-color: #c1c1c1;
 }
 h1 {
   color: black;
 }
-h2, p, .tags, .main-heading::before, .main-heading::after, .navigation__link, .social-networks__list__item a {
+h2, p, 
+.tags, 
+.main-heading::before, 
+.main-heading::after, 
+.navigation__link, 
+.social-networks__list__item a {
   color: #4b5156;
 }
-.pic__wrapper, .theme-dot {
+.navigation__link:hover, 
+.social-networks__list__item a:hover {
+  color: #ea676b;
+}
+.pic__wrapper, 
+.theme-dot {
   border-color: #4b5156;
 }
+.theme-dot:hover {
+  border-color: #ea676b;
+}
 .button {
-  color: #08fdd8;
-  background-color: #4b5156;
+  color: #ea676b;
+}
+.button:hover {
+  color: #eaeaea;
+  background-color: #ea676b;
 }
 .button_flat {  
-  border-color: #08fdd8;
+  border-color: #ea676b;
 }

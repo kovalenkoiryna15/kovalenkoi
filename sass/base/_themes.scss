@@ -10,6 +10,9 @@
   border: 2px solid $secondary-text;
   border-radius: 50%;
   cursor: pointer;
+  &:hover {
+    border-color: $color-active;
+  }
 }
 #light-mode {
   background-color: $light-mode;

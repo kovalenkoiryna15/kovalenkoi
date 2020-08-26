@@ -1,5 +1,12 @@
 .nav-bar {
   width: 60px;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  background-color: $nav-bar;
 }
 .navigation, .social-networks {
   display: flex;
@@ -9,11 +16,12 @@
 .navigation__link {
   line-height: 51px;
   height: 51px;
-  color: $color-navigation;
+  color: $color-icons;
   margin-bottom: 15px;
   display: block;
   position: relative;
-  text-align: center;  
+  text-align: center;
+  cursor: pointer;  
   &:after{
     font-size: 9px;
     letter-spacing: 2px;
@@ -22,7 +30,10 @@
     display: none;
     width: 100%;
     text-align: center;
-  }  
+  }
+  &:hover {
+    color: $color-active;
+  }
 }
 .link-home:after {
   content: "HOME";  
@@ -42,6 +53,9 @@
 .social-networks__list__item {
   padding: 0 0 15px;
   & a {
-    color: $color-navigation;
+    color: $color-icons;
+  }
+  & a:hover {
+    color: $color-active;
   }
 }
