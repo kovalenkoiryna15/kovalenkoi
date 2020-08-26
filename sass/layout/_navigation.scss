@@ -13,17 +13,16 @@
   margin-bottom: 15px;
   display: block;
   position: relative;
-  text-align: center;
-  &::after{
+  text-align: center;  
+  &:after{
     font-size: 9px;
     letter-spacing: 2px;
     position: absolute;
     bottom: 0;
-    display: block;
+    display: none;
     width: 100%;
     text-align: center;
-    opacity: 1;
-  }
+  }  
 }
 .link-home:after {
   content: "HOME";  

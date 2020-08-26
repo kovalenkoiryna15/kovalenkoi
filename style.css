@@ -2812,12 +2812,12 @@ a.button {
   display: block;
   width: max-content;
   cursor: pointer;
-  color: #08fdd8;
+  color: #08a8fd;
 }
 
 .button_flat {
   padding: 10px 18px;
-  border: 1px solid #08fdd8;
+  border: 1px solid #08a8fd;
   margin-top: 25px;
 }
 
@@ -2892,15 +2892,14 @@ a.button {
   position: relative;
   text-align: center;
 }
-.navigation__link::after {
+.navigation__link:after {
   font-size: 9px;
   letter-spacing: 2px;
   position: absolute;
   bottom: 0;
-  display: block;
+  display: none;
   width: 100%;
   text-align: center;
-  opacity: 1;
 }
 
 .link-home:after {

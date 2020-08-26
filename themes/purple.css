@@ -1,3 +1,16 @@
 body {
   background-color: #7E4C74;
 }
+h2, p, .tags, .main-heading::before, .main-heading::after, .navigation__link, .social-networks__list__item a {
+  color: #2b202f;
+}
+.pic__wrapper, .theme-dot {
+  border-color: #2b202f;
+}
+.button {
+  color: #d808fd;
+  background-color: #2b202f;
+}
+.button_flat {  
+  border-color: #d808fd
+}
