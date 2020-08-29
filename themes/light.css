@@ -11,11 +11,11 @@ h2, p,
 .tags, 
 .main-heading::before, 
 .main-heading::after, 
-.navigation__link, 
+.nav__link, 
 .social-networks__list__item a {
   color: #4b5156;
 }
-.navigation__link:hover, 
+.nav__link:hover, 
 .social-networks__list__item a:hover {
   color: #ea676b;
 }

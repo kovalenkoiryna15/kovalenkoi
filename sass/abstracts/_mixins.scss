@@ -4,6 +4,11 @@
   font-size: $size;  
   line-height: $line-height;
 }
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder          { @content; }
+  &::-ms-input-placeholder      { @content; }  
+}
 
 @mixin media-laptop {
   @media screen and (max-width: $content-width) {@content;}

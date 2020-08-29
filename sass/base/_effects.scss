@@ -1,0 +1,21 @@
+.cl-effect a::before,
+.cl-effect a::after {
+	position: absolute;
+	border: 1px solid $color-active;
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+.cl-effect a::after {	
+	border-width: 2px;
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+.cl-effect a:hover::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::before,
+.cl-effect a:focus::after {
+	opacity: 1;
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}

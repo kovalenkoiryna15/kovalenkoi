@@ -1,7 +1,7 @@
 body {
   background-color: #7E4C74;
 }
-h2, p, .tags, .main-heading::before, .main-heading::after, .navigation__link, .social-networks__list__item a {
+h2, p, .tags, .main-heading::before, .main-heading::after, .nav__link, .social-networks__list__item a {
   color: #2b202f;
 }
 .pic__wrapper, .theme-dot {

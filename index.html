@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="" id="theme-style">
   <title>Kovalenko Irina</title>
@@ -11,40 +15,54 @@
 <body>
   <main class="main-container">
     <div class="nav-bar">
-      <header class="header">
-          <a class="logo">LOGO</a>
+      <header class="header cl-effect">
+          <a class="logo-link" href="#home">
+            <p class="logo">ik</p>
+          </a>
         </header>
-        <nav class="navigation">
-          <a class="navigation__link link-home navigation__link_active"><i class="fi fi-home nav-ico"></i></a>
-          <a class="navigation__link link-female"><i class="fi fi-female nav-ico"></i></a>
-          <a class="navigation__link link-spinner-cog"><i class="fi fi-spinner-cog nav-ico"></i></a>
-          <a class="navigation__link link-eye"><i class="fi fi-eye nav-ico"></i></a>
-          <a class="navigation__link link-email"><i class="fi fi-email nav-ico"></i></a>    
+        <nav class="nav">
+          <a class="nav__link nav__link_home nav__link_active" href="#home">
+            <i class="fi fi-home nav-ico nav-ico_active"></i>
+          </a>
+          <a class="nav__link nav__link_about" href="#about">
+            <i class="fi fi-female nav-ico"></i>
+          </a>
+          <a class="nav__link nav__link_skills" href="#skills">
+            <i class="fi fi-spinner-cog nav-ico"></i>
+          </a>
+          <a class="nav__link nav__link_work" href="#work">
+            <i class="fi fi-eye nav-ico"></i>
+          </a>
+          <a class="nav__link nav__link_contact" href="#contact">
+            <i class="fi fi-email nav-ico"></i>
+          </a>    
         </nav>
         <div class="social-networks">
           <ul class="social-networks__list">
             <li class="social-networks__list__item">
-              <a href="#" target="_blank"><i class="fi fi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank"><i class="fi fi-linkedin"></i></a>
             </li>
             <li class="social-networks__list__item">           
-              <a href="#" target="_blank"><i class="fi fi-telegram"></i></a>
+              <a href="https://t.me/ir15leo" target="_blank"><i class="fi fi-telegram"></i></a>
             </li>
             <li class="social-networks__list__item">            
-              <a href="#" target="_blank"><i class="fi fi-facebook"></i></a>
+              <a href="https://www.facebook.com/irina.kovalenko.7127?ref=bookmarks" target="_blank"><i class="fi fi-facebook"></i></a>
             </li>
           </ul>
         </div>
     </div>
-    <section class="blank blank_home wrapper blank_current">
+    <section id="home" class="blank blank_home wrapper blank_current">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
-      <div class="text-zone">
-        <div>
-          <h1 class="main-heading"><br>Hi,<br>I'm Irina,<br>web developer.</h1>
-          <h2 class="sub-heading">Front End Developer / Freelancer</h2>
+      <div class="content">
+        <div class="text-zone">
+          <h1 class="main-heading"><br>Hi,<br>I'm <span class="logo">i</span>rina <span class="logo">k</span>ovalenko,<br><span class="txt-type" data-wait="3000" data-words='["web developer.", "Frontend developer.", "JS developer."]'></span></h1>
+          <h2 class="sub-heading">Full Time / Freelance</h2>
           <a rel="contact" href="#" class="button button_flat">CONTACT ME</a>
         </div>
-        <div class="personalize">
-          <div class="pic__wrapper"><img id="profile-pic" src="assets/images/myFoto.JPG" alt="foto"></div>
+        <div class="home-pic">
+          <div class="home-pic__wrapper">
+            <p class="logo" id="home-logo">ik</p>
+          </div>
           <h2 class="sub-heading">Personalize Theme</h2>
           <div class="theme-options">
             <div class="theme-dot" id="light-mode" mode="light"></div>
@@ -57,65 +75,91 @@
       </div>
       <span class="tags bottom-tags">&nbsp;&nbsp;&lt;/body><br>&lt;html></span>           
     </section>
-    <section class="blank blank_about wrapper">
+    <section id="about" class="blank blank_about wrapper">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
-      <div class="text-zone">
-        <h1 class="main-heading">About me</h1>
-        <p class="text">Professionally connected with the web development industry and information technology for many years.</p>
-        <p class="text">Well-organized person, problem solver, independent employee with high attention to detail. Fan of MMA, outdoor activities, TV series and, recently, English literature. A family person, father of two fractious boys, therefore remote employment is preferred.</p>
-        <p class="text">Interested in the entire frontend spectrum and working on ambitious projects with positive people.</p>
+      <div class="content">
+        <div class="text-zone">
+          <h1 class="main-heading">About me</h1>
+          <div class="sub-heading">
+            <p class="text"><span class="tags">&lt;p></span></p>
+            <p class="text">Keen on web development industry and IT.</p>
+            <p class="text">Well-organized person with high attention to detail. Fan of film industry, travelling, outdoor activities and literature.</p>
+            <p class="text">Interested in the entire frontend spectrum and working on ambitious projects with passionate people.</p>
+            <p class="text"><span class="tags">&lt;/p></span></p>
+          </div>          
+        </div>
+        <div class="personalize">
+          <div class="about-pic__wrapper"><img id="about-pic" src="assets/images/myFoto.JPG" alt="foto"></div>
+        </div>      
       </div>
       <span class="tags bottom-tags">&nbsp;&nbsp;&lt;/body><br>&lt;html></span>     
     </section>
-    <section class="blank blank_skills wrapper">
+    <section id="skills" class="blank blank_skills wrapper">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
-      <div class="text-zone">
-        <h1 class="main-heading">Skills &<br> Experience</h1>
-        <p class="text">The main area of my expertise is front end development (client side of the web).</p>
-        <p class="text">HTML, CSS, JS (TypeScript), building small and medium web apps with Angular 2+, custom plugins, features, animations, and coding interactive layouts.</p>
-        <p class="text">I have also full-stack developer experience with open source CMS like (WordPress, Drupal, Magento, Keystone.js and other)</p>
-        <p class="text">Visit my <a href="">LinkedIn</a> profile for more details or just <a href="">contact</a> me.</p>
+      <div class="content">
+        <div class="text-zone">
+          <h1 class="main-heading">Skills &<br> Experience</h1>
+          <div class="sub-heading">
+            <p class="text"><span class="tags">&lt;p></span></p>
+            <p class="text">The main area of my expertise is front end development (client side).</p>
+            <p class="text">HTML5, CSS3 (preprocessor Sass, BEM), JavaScript, coding layouts (responsive, cross platform, interactive) and building small and medium web apps with React.</p>
+            <p class="text">I have also experience with GIT, npm, webpack.</p>
+            <p class="text">Visit my <a href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank">LinkedIn</a> profile for more details or just <a href="#contact">contact</a> me.</p>
+            <p class="text"><span class="tags">&lt;/p></span></p>
+          </div>          
+        </div>        
       </div>
       <span class="tags bottom-tags">&nbsp;&nbsp;&lt;/body><br>&lt;html></span>
     </section>
-    <section class="blank blank_work wrapper">
+    <section id="work" class="blank blank_work wrapper">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
-      <div class="text-zone">
-        <h1 class="main-heading">My Work</h1>
-        <div class="demo"></div>
+      <div class="content">
+        <div class="text-zone">
+          <h1 class="main-heading">My Projects</h1>
+          <div class="sub-heading"></div>
+          <div class="demo"></div>
+        </div>
       </div>
       <span class="tags bottom-tags">&nbsp;&nbsp;&lt;/body><br>&lt;html></span>    
     </section>
-    <section class="blank blank_contact wrapper">
+    <section id="contact" class="blank blank_contact wrapper">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
-      <div class="text-zone">
-        <h1 class="main-heading">Contact me</h1>
-        <p class="text">I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me using below form either.</p>
-        <div class="contact-form">
-          <form>
-            <ul>
-              <li>
-                <input class="input__field" placeholder="Name" type="text" name="name">
-                <label class="input__label"></label>
-              </li>
-              <li>
-                <input class="input__field" placeholder="Email" type="email" name="email">
-                <label class="input__label"></label>
-              </li>
-              <li>
-                <input class="input__field" placeholder="Subject" type="text" name="subject">
-                <label class="input__label"></label>
-              </li>
-              <li>
-                <textarea class="input__field" placeholder="Message" name="message"></textarea>
-                <label class="input__label"></label>
-              </li>
-              <li class="submit">
-                <input type="hidden" name="ip" value="">
-                <input class="button_flat" id="submit" type="submit" value="SEND">
-              </li>
-            </ul>
-          </form>
+      <div class="content">
+        <div class="text-zone">
+          <h1 class="main-heading">Contact me</h1>
+          <div class="sub-heading">
+            <p class="text text">Don’t hesitate to contact me using below form.</p>
+          </div>          
+          <div class="contact-form">
+            <form class="form" autocomplete="off">
+              <ul class="grid-container">
+                <li class="post post-1">                  
+                  <label class="input__label">
+                    <input class="input__field" placeholder="Name" type="text" name="name" required minlength="2">
+                  </label>
+                </li>
+                <li class="post post-2">                  
+                  <label class="input__label">
+                    <input class="input__field" placeholder="Email" type="email" name="email" required>
+                  </label>
+                </li>
+                <li class="post post-3">                  
+                  <label class="input__label">
+                    <input class="input__field" placeholder="Subject" type="text" name="subject" required>
+                  </label>
+                </li>
+                <li class="post-4">                  
+                  <label class="input__label">
+                    <textarea class="input__field" placeholder="Message" name="message" required></textarea>
+                  </label>
+                </li>
+                <li class="post-5">
+                  <input type="hidden" name="ip" value="">
+                  <input class="button button_flat button_submit" id="submit" type="submit" value="SEND">
+                </li>
+              </ul>
+            </form>
+          </div>
         </div>
       </div>
       <span class="tags bottom-tags">&nbsp;&nbsp;&lt;/body><br>&lt;html></span>

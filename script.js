@@ -1,93 +1,49 @@
-const blanks = document.querySelectorAll('.blank');
-const themeDots = document.querySelectorAll('.theme-dot');
-
 window.onload = function() {
-
-  handleScrollEvents();
-
   addThemesDotsHandler();
+  addNavButtonsClickHandler();
+  initWriter();
+};
 
-}
-
-const nextBlank = () => {
-  const current = document.querySelector('.blank_current');
-  current.classList.remove('blank_current');
-  // Check for next blank
-  if (current.nextElementSibling) {
-    // Add current class to next element sibling
-    current.nextElementSibling.classList.add('blank_current');
-  } else {
-    // Add current class to start
-    blanks[0].classList.add('blank_current');
-  }
-}
-const previousBlank = () => {
-  const current = document.querySelector('.blank_current');
-  current.classList.remove('blank_current');
-  // Check for next blank
-  if (current.previousElementSibling) {
-    // Add current class to previous element sibling
-    current.previousElementSibling.classList.add('blank_current');
-  } else {
-    // Add current class to end
-    blanks[blanks.length -1].classList.add('blank_current');
-  }
-}
-
-// Scroll events
-const handleScrollEvents = () => {
-  window.addEventListener("DOMMouseScroll", MouseWheelHandler, false); // Mozilla Firefox - this.handleMouseWheelDOM
-  window.addEventListener('mousewheel', MouseWheelHandler, false); // Other browsers this.handleMouseWheel
-  // document.attachEvent('onmousewheel', MouseWheelHandler); //???????IE 6/7/8
-  window.addEventListener('touchstart', this.touchStart, false); // mobile devices
-  window.addEventListener('touchmove', this.touchMove, false); // mobile devices
-  let i = 1;
-  let mouseWheel = true;
-  function MouseWheelHandler(e) {
-    if (!mouseWheel) {
-      return false;
+const addNavButtonsClickHandler = () => {
+  document.querySelector('.nav').addEventListener('click', function(e){
+    if (e.target.classList.contains('nav__link')) {
+      let clickedLink = e.target;
+      removeActiveIcons();
+      removeActiveLinks();
+      selectActiveLink(clickedLink);
     }
-    mouseWheel = false;
-    // Stop mouse wheel event for 1 second
-    setTimeout(function() {
-      mouseWheel = true;
-    }, 500); 
-    e = window.event || e;
-    const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-    const h = document.documentElement.clientHeight;
-    const section = document.getElementsByClassName("blank");
-    console.log(i);
-    if (i <= section.length && i >= 0) {
-      //scrolling down?
-      if (delta < 0) {
-        nextBlank();
-        // window.scrollTo({
-        //   top: h * i,
-        //   behavior: "smooth"
-        // });
-        i++;
-      } else {
-        //scrolling up?
-        previousBlank();
-        // window.scrollTo({
-        //   top: h * i,
-        //   behavior: "smooth"
-        // });
-        i--;
-      }
-    } else {
-      i = 1;
-      nextBlank();
-      // window.scrollTo({
-      //   top: 0,
-      //   behavior: "smooth"
-      // });
+    if(e.target.classList.contains('nav-ico')) {
+      let clickedIcon = e.target;
+      removeActiveIcons();
+      removeActiveLinks();
+      selectActiveIcon(clickedIcon);
     }
-  }
+  });      
+};
+
+const removeActiveLinks = () => {
+  let links = document.querySelectorAll('.nav__link');
+  links.forEach(link => {
+    link.classList.remove('nav__link_active');
+  })
+}
+const removeActiveIcons = () => {
+  let icons = document.querySelectorAll('.nav-ico');
+  icons.forEach(icon => {
+    icon.classList.remove('nav-ico_active');
+  })
+}
+
+const selectActiveLink = (clickedLink) => {
+  clickedLink.classList.add('nav__link_active');
+}
+const selectActiveIcon = (clickedIcon) => {
+  clickedIcon.classList.add('nav-ico_active');
 }
 
 // Themes Options
 const addThemesDotsHandler = () => {
+  const themeDots = document.querySelectorAll('.theme-dot');
   themeDots.forEach(item => {
     item.addEventListener('click', function(e){
       let clickedDot = e.target;
@@ -111,3 +67,64 @@ function setTheme (themeMode) {
     document.getElementById('theme-style').href = 'style.css';
   }
 }
+
+//ES6 Class TypeWriter
+class TypeWriter {
+  constructor (txtElement, words, wait = 3000) {
+    this.txtElement = txtElement;
+    this.words = words;
+    this.txt = "";
+    this.wordIndex = 0;
+    this.wait = parseInt(wait, 10);
+    this.type();
+    this.isDeleting = false;
+    this.timerID;
+  }
+  type() {
+    // Current Index Of Word
+    const currentWord = this.wordIndex % this.words.length;
+    // Get Full Text Of Current Word
+    const fullTxt = this.words[currentWord];
+    //Check if deleting
+    if(this.isDeleting) {
+      // Remove char
+      this.txt = fullTxt.substring(0, this.txt.length - 1)
+    } else {
+      // Add char
+      this.txt = fullTxt.substring(0, this.txt.length + 1)
+    }
+    //Insert txt into element
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`
+    // Initial Type Speed
+    let typeSpeed = 200;
+
+    if(this.isDeleting){
+      typeSpeed /= 3;
+    }
+    // If word is complete
+    if(!this.isDeleting && this.txt === fullTxt){
+      typeSpeed = this.wait;
+      //Set delete to true
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === ''){
+      this.isDeleting = false;
+      //Move to next word
+      this.wordIndex++;
+      //Pause before start typing
+      typeSpeed = 200;
+    }
+    this.timerID = setTimeout(()=> this.type(), typeSpeed);
+  }
+  stop(){   
+    clearTimeout(this.timerID);
+  }
+};
+
+// Init Writer App
+function initWriter() {  
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWriter      
+  const writer = new TypeWriter(txtElement, words, wait);           
+};

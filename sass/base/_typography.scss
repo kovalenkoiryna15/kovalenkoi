@@ -4,14 +4,17 @@ html {
   font-size: 10px;
 }
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   @include font (normal, normal, 1.4rem, 1.6rem);
   color: $secondary-text; 
 }
 h1 {  
   @include font (normal, 500, 6rem, 5.3rem);
-  color: $main-text;
+  color: $color-active;
   letter-spacing: 3px;
+}
+#home h1 {
+  color: $main-text;
 }
 h2 {
   font-family: 'Open Sans', sans-serif;
@@ -21,11 +24,19 @@ h2 {
   color: $secondary-text;
 }
 p {
-  font-family: 'Open Sans', sans-serif;
-  @include font (normal, 400, 1.1rem, 1.5rem);
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  @include font (normal, normal, 1.4rem, 1.6rem);
   letter-spacing: 3px;  
   margin: 10px 0;
+  color: $main-text;
+}
+#home p {  
   color: $secondary-text;
+  @include font (normal, 400, 1.1rem, 1.5rem);
+}
+p a {
+  color: $color-active;
+  text-decoration: underline;
 }
 .tags, .main-heading::before, .main-heading::after {
   font-family: 'La Belle Aurore', cursive;
@@ -34,6 +45,12 @@ p {
 }
 .main-heading::before {
   content: '<h1>';  
+}
+.sub-heading {
+  margin: 15px 0;
+}
+.home-pic h2.sub-heading {
+  color: $main-text;
 }
 .main-heading::after {
   content: '</h1>';  
