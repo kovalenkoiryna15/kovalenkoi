@@ -1,0 +1,9 @@
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  & .social-networks__list__item {
+    font-size: 1.6rem;
+    padding: 15px 0;
+  }
+}

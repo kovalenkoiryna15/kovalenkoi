@@ -2964,94 +2964,14 @@ a.button {
   padding: 15px 0;
 }
 
-.grid-container {
-  display: grid;
-  display: grid;
-  grid-template-areas: "post-1 post-1 post-2 post-2" "post-3 post-3 post-3 post-3" "post-4 post-4 post-4 post-4" "post-4 post-4 post-4 post-4" "post-5 post-5 post-5 post-5";
-  grid-template-rows: repeat(4, 50px);
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-
-.post-1 {
-  grid-area: post-1;
-}
-
-.post-2 {
-  grid-area: post-2;
-}
-
-.post-3 {
-  grid-area: post-3;
-}
-
-.post-4 {
-  grid-area: post-4;
-}
-
-.post-5 {
-  grid-area: post-5;
+.contact-links {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
-.input__field {
-  width: 100%;
-  height: 50px;
-  background: #2b2b2b;
-  padding: 0 20px;
-}
-.input__field:focus {
-  color: #fff;
-  outline: none;
-}
-.input__field:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-.input__field:focus::-moz-placeholder {
-  color: transparent;
-}
-.input__field:focus::-ms-input-placeholder {
-  color: transparent;
-}
-.input__field::-webkit-input-placeholder {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  color: #8d8d8d;
-}
-.input__field::-moz-placeholder {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  color: #8d8d8d;
-}
-.input__field::-ms-input-placeholder {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  color: #8d8d8d;
-}
-
-input[type=text], input[type=email], textarea {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-  color: #8d8d8d;
-}
-textarea.input__field {
-  padding: 20px 20px;
-  height: 100px;
-  resize: none;
+.contact-links .social-networks__list__item {
+  font-size: 1.6rem;
+  padding: 15px 0;
 }
 
 .main-container {
