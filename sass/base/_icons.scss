@@ -1,6 +1,8 @@
 .fi-object {
   width: 24px;
-  height: 24px;  
+  height: 24px;
+  
+  // z-index: -1; 
 }
 .fi-path {
   transition: all .4s ease;

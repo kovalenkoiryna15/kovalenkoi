@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 *, *:after, *:before {
   box-sizing: border-box;
 }
@@ -55,7 +56,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.4rem;
@@ -64,12 +65,17 @@ body {
 }
 
 h1 {
+  font-family: "Raleway", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 6rem;
   line-height: 5.3rem;
+  font-style: italic;
   color: #08a8fd;
   letter-spacing: 3px;
+}
+h1 .name {
+  color: #08a8fd;
 }
 
 #home h1 {
@@ -77,7 +83,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
@@ -88,7 +94,6 @@ h2 {
 }
 
 p {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.4rem;
@@ -267,6 +272,14 @@ a.button {
   opacity: 1;
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
+@media screen and (max-width: 768px) {
+  .cl-effect a:hover::before,
+.cl-effect a:hover::after,
+.cl-effect a:focus::before,
+.cl-effect a:focus::after {
+    opacity: 0;
+  }
+}
 
 .toggler {
   display: none;
@@ -276,7 +289,7 @@ a.button {
   z-index: 2;
   cursor: pointer;
   width: 50px;
-  height: 50px;
+  height: 100%;
   opacity: 0;
 }
 @media screen and (max-width: 768px) {
@@ -318,8 +331,8 @@ a.button {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 100%;
   padding: 1rem;
   background: #181818;
 }
@@ -435,6 +448,7 @@ a.button {
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -464,6 +478,7 @@ a.button {
   padding: 0 0 15px 0;
   position: fixed;
   left: 0;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -475,6 +490,9 @@ a.button {
     height: 70px;
     width: 100vw;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0;
   }
 }
 
@@ -482,9 +500,11 @@ a.button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   .nav {
+    visibility: hidden;
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -497,10 +517,14 @@ a.button {
 @media screen and (max-width: 768px) {
   .nav > div {
     background: #181818;
-    opacity: 0.85;
+    opacity: 0.9;
     border-radius: 50%;
     height: 200vh;
     width: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
     transform: scale(0);
     transition: all 0.4s ease;
   }
@@ -509,8 +533,9 @@ a.button {
 @media screen and (max-width: 768px) {
   .nav > div > div {
     text-align: center;
-    height: 100vh;
+    max-height: 100vh;
     max-width: 90vw;
+    opacity: 0;
     transition: opacity 0.4s ease;
   }
 }
@@ -599,12 +624,24 @@ a.button {
 }
 @media screen and (max-width: 768px) {
   .social-networks__list {
+    min-width: 110px;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
 .social-networks__list__item {
   padding: 0 0 15px;
+}
+@media screen and (max-width: 768px) {
+  .social-networks__list__item {
+    padding: 0 0;
+  }
+}
+
+.social-networks__item__link {
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

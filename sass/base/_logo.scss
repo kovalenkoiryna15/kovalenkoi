@@ -2,14 +2,14 @@
   padding: 20px 0;
   height: 15%;
   text-align: center;
-  background: $background-header;
+  background: $background-header;  
 }
 .header.cl-effect a::before,
 .header.cl-effect a::after{
   top: 4.5rem;
 	left: 50%;
 	width: 69px;
-	height: 69px;
+  height: 69px;  
 }
 .header.cl-effect a::after {
   width: 65px;

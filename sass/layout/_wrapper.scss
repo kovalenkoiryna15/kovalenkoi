@@ -5,6 +5,7 @@
   overflow-y: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  overflow: hidden;  
 }
 .wrapper {
   height: 100vh;  
