@@ -4,9 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="" id="theme-style">
@@ -15,41 +12,69 @@
 <body>
   <main class="main-container">
     <div class="nav-bar">
+      <input type="checkbox" class="toggler">
+      <div class="hamburger"><div></div></div>
       <header class="header cl-effect">
-          <a class="logo-link" href="#home">
-            <p class="logo">ik</p>
-          </a>
-        </header>
-        <nav class="nav">
-          <a class="nav__link nav__link_home nav__link_active" href="#home">
-            <i class="fi fi-home nav-ico nav-ico_active"></i>
-          </a>
-          <a class="nav__link nav__link_about" href="#about">
-            <i class="fi fi-female nav-ico"></i>
-          </a>
-          <a class="nav__link nav__link_skills" href="#skills">
-            <i class="fi fi-spinner-cog nav-ico"></i>
-          </a>
-          <a class="nav__link nav__link_work" href="#work">
-            <i class="fi fi-eye nav-ico"></i>
-          </a>
-          <a class="nav__link nav__link_contact" href="#contact">
-            <i class="fi fi-email nav-ico"></i>
-          </a>    
-        </nav>
-        <div class="social-networks">
-          <ul class="social-networks__list">
-            <li class="social-networks__list__item">
-              <a href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank"><i class="fi fi-linkedin"></i></a>
-            </li>
-            <li class="social-networks__list__item">           
-              <a href="https://t.me/ir15leo" target="_blank"><i class="fi fi-telegram"></i></a>
-            </li>
-            <li class="social-networks__list__item">            
-              <a href="https://www.facebook.com/irina.kovalenko.7127?ref=bookmarks" target="_blank"><i class="fi fi-facebook"></i></a>
-            </li>
-          </ul>
-        </div>
+        <a class="logo-link" href="#home">
+          <p class="logo">ik</p>
+        </a>
+      </header>      
+      <nav class="nav">
+        <div>
+          <div>
+            <a class="nav__link nav__link_home nav__link_active" href="#home">
+              <object type="image/svg+xml" data="assets/icons/home.svg" class="fi-object nav-ico nav-ico_active">
+                Your browser does not support SVG
+              </object>
+            </a>
+            <a class="nav__link nav__link_about" href="#about">
+              <object type="image/svg+xml" data="assets/icons/famale.svg" class="fi-object nav-ico nav-ico_active">
+                Your browser does not support SVG
+              </object>
+            </a>
+            <a class="nav__link nav__link_skills" href="#skills">
+              <object type="image/svg+xml" data="assets/icons/spinner-cog.svg" class="fi-object nav-ico nav-ico_active">
+                Your browser does not support SVG
+              </object>
+            </a>
+            <a class="nav__link nav__link_work" href="#work">
+              <object type="image/svg+xml" data="assets/icons/eye.svg" class="fi-object nav-ico nav-ico_active">
+                Your browser does not support SVG
+              </object>
+            </a>
+            <a class="nav__link nav__link_contact" href="#contact">
+              <object type="image/svg+xml" data="assets/icons/email.svg" class="fi-object nav-ico nav-ico_active">
+                Your browser does not support SVG
+              </object>
+            </a>
+          </div>
+        </div>                    
+      </nav>
+      <div class="social-networks">
+        <ul class="social-networks__list">
+          <li class="social-networks__list__item">
+            <a class="social-networks__item__link" href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank">
+              <object type="image/svg+xml" data="assets/icons/linkedin.svg" class="fi-object fi-linkedin">
+                Your browser does not support SVG
+              </object>
+            </a>
+          </li>
+          <li class="social-networks__list__item">           
+            <a class="social-networks__item__link" href="https://t.me/ir15leo" target="_blank">
+              <object type="image/svg+xml" data="assets/icons/telegram.svg" class="fi-object fi-telegram">
+                Your browser does not support SVG
+              </object>
+            </a>
+          </li>
+          <li class="social-networks__list__item">            
+            <a class="social-networks__item__link" href="https://www.facebook.com/irina.kovalenko.7127?ref=bookmarks" target="_blank">
+              <object type="image/svg+xml" data="assets/icons/facebook.svg" class="fi-object fi-facebook">
+                Your browser does not support SVG
+              </object>
+            </a>
+          </li>
+        </ul>
+      </div>      
     </div>
     <section id="home" class="blank blank_home wrapper blank_current">
       <span class="tags top-tags">&lt;html><br>&nbsp;&nbsp;&lt;body></span>
@@ -140,15 +165,30 @@
             <div class="contact-link">
               <p>Links on my social social networks:</p>
               <div class="links_social-networks">
-                <ul class="social-networks">
+                <ul class="social-networks__list">
                   <li class="social-networks__list__item">
-                    <a href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank"><i class="fi fi-linkedin"></i> LinkedIn</a>
+                    <a class="social-networks__item__link" href="https://www.linkedin.com/in/irina-kovalenko-a36350181/" target="_blank">
+                      <object type="image/svg+xml" data="assets/icons/linkedin.svg" class="fi-object fi-linkedin">
+                        Your browser does not support SVG
+                      </object>
+                      LinkedIn
+                    </a>
                   </li>
                   <li class="social-networks__list__item">           
-                    <a href="https://t.me/ir15leo" target="_blank"><i class="fi fi-telegram"></i> Telegram</a>
+                    <a class="social-networks__item__link" href="https://t.me/ir15leo" target="_blank">
+                      <object type="image/svg+xml" data="assets/icons/telegram.svg" class="fi-object fi-telegram">
+                        Your browser does not support SVG
+                      </object>
+                      Telegram
+                    </a>
                   </li>
                   <li class="social-networks__list__item">            
-                    <a href="https://www.facebook.com/irina.kovalenko.7127?ref=bookmarks" target="_blank"><i class="fi fi-facebook"></i> Facebook</a>
+                    <a class="social-networks__item__link" href="https://www.facebook.com/irina.kovalenko.7127?ref=bookmarks" target="_blank">
+                      <object type="image/svg+xml" data="assets/icons/facebook.svg" class="fi-object fi-facebook">
+                        Your browser does not support SVG
+                      </object>
+                      Facebook
+                    </a>
                   </li>
                 </ul>
               </div>

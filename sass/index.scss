@@ -1,4 +1,3 @@
-@import "fontisto/fontisto";
 // Abstracts
 @import "abstracts/variables";
 @import "abstracts/placeholders";
@@ -13,6 +12,7 @@
 @import "base/effects";
 
 // Components
+@import "components/hamburger";
 @import "components/buttons";
 @import "components/home";
 @import "components/pictures";

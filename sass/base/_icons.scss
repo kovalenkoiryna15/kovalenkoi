@@ -1,3 +1,18 @@
-
-
-
+.fi-object {
+  width: 24px;
+  height: 24px;  
+}
+.fi-path {
+  transition: all .4s ease;
+  fill: $color-icons;
+}
+.fi-svg {
+  fill: $color-icons;
+  cursor: pointer;
+  &:hover {
+    fill: $color-active;
+    .fi-path {
+      fill: $color-active;
+    }
+  } 
+}
