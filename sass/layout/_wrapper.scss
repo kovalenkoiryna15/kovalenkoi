@@ -17,11 +17,21 @@
   justify-content: space-around;
   scroll-snap-align: center;
 }
+#home .content {
+  flex-direction: column;
+}
 .content {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .text-zone {
   padding: 0 0 0 120px;
   min-width: 87%;
+}
+.home__text-zone {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

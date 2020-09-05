@@ -1,30 +1,18 @@
-.home-pic__wrapper {
-  height: 300px;
-  width: 300px;
+.pic__wrapper {
+  height: 200px;
+  width: 200px;
   overflow: hidden;
-  margin: 0 0 40px 0;
-}
-#home-pic {
-  height: 100%;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  margin: 0 auto;
-}
-.about-pic__wrapper {
-  height: 300px;
-  width: 300px;
-  overflow: hidden;
-  border: 2px solid $secondary-text;
   border-radius: 50%;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
-#about-pic {
+#about-pic, #home-pic {
   display: block;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
   filter: contrast(1.2) saturate(1.05); 
-  transform: translate(-35%, -37%) scale(0.32,0.32);
+  transform: translate(-40%, -40%) scale(0.25,0.25);
+}
+#home-pic {
+  transform: translate(-42%, -40%) scale(0.25,0.25);
 }

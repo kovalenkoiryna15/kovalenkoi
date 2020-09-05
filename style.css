@@ -83,7 +83,7 @@ h1 .name {
 }
 
 h2 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 1.4rem;
@@ -215,8 +215,16 @@ a.button {
   fill: #08a8fd;
 }
 
+.themes {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .theme-options {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   padding: 10px 0;
 }
@@ -387,6 +395,7 @@ a.button {
 }
 
 .home-pic {
+  display: flex;
   text-align: center;
 }
 
@@ -394,38 +403,29 @@ a.button {
   border-right: 0.2rem solid #fff;
 }
 
-.home-pic__wrapper {
-  height: 300px;
-  width: 300px;
-  overflow: hidden;
-  margin: 0 0 40px 0;
+.tags-themes {
+  position: relative;
 }
 
-#home-pic {
-  height: 100%;
-  width: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  margin: 0 auto;
-}
-
-.about-pic__wrapper {
-  height: 300px;
-  width: 300px;
+.pic__wrapper {
+  height: 200px;
+  width: 200px;
   overflow: hidden;
-  border: 2px solid #8d8d8d;
   border-radius: 50%;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
 
-#about-pic {
+#about-pic, #home-pic {
   display: block;
   object-fit: cover;
   object-position: center;
   margin: 0 auto;
   filter: contrast(1.2) saturate(1.05);
-  transform: translate(-35%, -37%) scale(0.32, 0.32);
+  transform: translate(-40%, -40%) scale(0.25, 0.25);
+}
+
+#home-pic {
+  transform: translate(-42%, -40%) scale(0.25, 0.25);
 }
 
 .tags {
@@ -462,14 +462,26 @@ a.button {
   scroll-snap-align: center;
 }
 
+#home .content {
+  flex-direction: column;
+}
+
 .content {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .text-zone {
   padding: 0 0 0 120px;
   min-width: 87%;
+}
+
+.home__text-zone {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-bar {

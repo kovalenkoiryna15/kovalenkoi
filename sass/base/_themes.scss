@@ -1,5 +1,12 @@
+.themes {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .theme-options {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   padding: 10px 0;
 }

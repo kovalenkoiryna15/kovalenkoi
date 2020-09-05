@@ -1,6 +1,10 @@
 .home-pic {
+  display: flex;
   text-align: center;
 }
 .txt-type > .txt {
   border-right: 0.2rem solid #fff;
+}
+.tags-themes {
+  position: relative;
 }
