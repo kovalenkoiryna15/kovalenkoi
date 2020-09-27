@@ -125,6 +125,23 @@ p a {
   color: #8d8d8d;
 }
 
+#about .main-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about__sub-heading span span {
+  color: #08a8fd;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.52rem;
+}
+
+.education {
+  text-align: center;
+}
+
 .main-heading::before {
   content: "<h1>";
 }
@@ -156,42 +173,6 @@ a.button {
 
 .personalize {
   text-align: center;
-}
-
-.header {
-  padding: 20px 0;
-  height: 15%;
-  text-align: center;
-  background: #070707;
-}
-
-.header.cl-effect a::before,
-.header.cl-effect a::after {
-  top: 4.5rem;
-  left: 50%;
-  width: 69px;
-  height: 69px;
-}
-
-.header.cl-effect a::after {
-  width: 65px;
-  height: 65px;
-}
-
-.logo {
-  font-family: "La Belle Aurore", cursive;
-  font-size: 6rem;
-  line-height: 6.4rem;
-  margin: 0 0;
-  color: #08a8fd;
-}
-
-#home-logo {
-  font-size: 38rem !important;
-  line-height: 42rem !important;
-  color: #08a8fd !important;
-  margin: 0 0 !important;
-  height: 100%;
 }
 
 .fi-object {
@@ -247,14 +228,6 @@ a.button {
 
 #dark-mode {
   background-color: #1d1d1d;
-}
-
-#green-mode {
-  background-color: #78866b;
-}
-
-#purple-mode {
-  background-color: #7E4C74;
 }
 
 .cl-effect a::before,
@@ -394,6 +367,17 @@ a.button {
   background-color: #08a8fd;
 }
 
+#home .content {
+  flex-direction: column;
+}
+
+.home__text-zone {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .home-pic {
   display: flex;
   text-align: center;
@@ -407,12 +391,73 @@ a.button {
   position: relative;
 }
 
+.text-zone__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.text-zone__wrapper > * {
+  flex-basis: 50%;
+}
+
+.soft-skills__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.soft-skills__wrapper > * {
+  flex-basis: 40%;
+}
+
+.education__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.education__wrapper > * {
+  flex-basis: 50%;
+}
+
+.text_education {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .pic__wrapper {
   height: 200px;
   width: 200px;
   overflow: hidden;
+  margin: 0 auto 20px auto;
+}
+
+.pic__wrapper_education {
+  display: inline-block;
+  margin: 5px 20px 5px 20px;
+}
+
+#bsu {
+  width: 129.4px;
+  height: 109px;
+  padding: 0 35.7px;
+}
+#bsu img {
+  margin: 0 auto;
+}
+
+.home-pic .pic__wrapper {
   border-radius: 50%;
-  margin: 0 0 20px 0;
+}
+
+#about .pic__wrapper {
+  border-radius: 10%;
 }
 
 #about-pic, #home-pic {
@@ -428,8 +473,12 @@ a.button {
   transform: translate(-42%, -40%) scale(0.25, 0.25);
 }
 
-.tags {
-  padding: 15px 0;
+.bottom-tags {
+  padding-bottom: 5px;
+}
+
+.top-tags {
+  padding-top: 5px;
 }
 
 .contact-links {
@@ -452,36 +501,20 @@ a.button {
 }
 
 .wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 1024px;
   margin: 0 auto;
-  padding: 0 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   scroll-snap-align: center;
 }
 
-#home .content {
-  flex-direction: column;
-}
-
 .content {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.text-zone {
-  padding: 0 0 0 120px;
-  min-width: 87%;
-}
-
-.home__text-zone {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .nav-bar {
@@ -493,7 +526,7 @@ a.button {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #181818;
 }
 @media screen and (max-width: 768px) {

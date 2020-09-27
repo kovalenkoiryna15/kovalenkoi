@@ -1,0 +1,18 @@
+.text-zone__wrapper {
+  @include flex (50%, column);
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.soft-skills__wrapper {
+  @include flex (40%, row);
+  justify-content: flex-end;
+}
+.education__wrapper {
+  @include flex (50%, row);
+  flex-wrap: wrap;
+}
+.text_education {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

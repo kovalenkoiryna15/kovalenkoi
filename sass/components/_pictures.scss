@@ -1,10 +1,30 @@
 .pic__wrapper {
   height: 200px;
   width: 200px;
-  overflow: hidden;
-  border-radius: 50%;
-  margin: 0 0 20px 0;
+  overflow: hidden;  
+  margin: 0 auto 20px auto;
 }
+.pic__wrapper_education {
+  display: inline-block;    
+  margin: 5px 20px 5px 20px;  
+}
+#bsu {
+  width: 129.4px; 
+  height: 109px;
+  padding: 0 35.7px;
+  // background-color: rgb(255,255,255);
+  & img {
+    margin: 0 auto;
+  }
+}
+
+.home-pic .pic__wrapper {
+  border-radius: 50%;
+}
+#about .pic__wrapper {
+  border-radius: 10%;
+}
+
 #about-pic, #home-pic {
   display: block;
   object-fit: cover;
@@ -13,6 +33,7 @@
   filter: contrast(1.2) saturate(1.05); 
   transform: translate(-40%, -40%) scale(0.25,0.25);
 }
-#home-pic {
+
+#home-pic {  
   transform: translate(-42%, -40%) scale(0.25,0.25);
 }

@@ -4,6 +4,17 @@
   font-size: $size;  
   line-height: $line-height;
 }
+
+@mixin flex ($basis, $direction) {
+  display: flex;
+  flex-wrap: wrap;  
+  align-items: center;
+  flex-direction: $direction;
+  >* {
+    flex-basis: $basis;
+  }
+}
+
 @mixin placeholder {
   &::-webkit-input-placeholder { @content; }
   &::-moz-placeholder          { @content; }
